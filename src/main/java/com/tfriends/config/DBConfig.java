@@ -39,7 +39,7 @@ public class DBConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setMapperLocations(applicationContext.getResources("classpath:/dtoxml/**/*.xml"));
+        factoryBean.setMapperLocations(applicationContext.getResources("classpath:/daoxml/**/*.xml"));
         factoryBean.setTypeAliasesPackage("com.tfriends.dto");
         factoryBean.setConfiguration(mybatisConfg());
         return factoryBean.getObject();
