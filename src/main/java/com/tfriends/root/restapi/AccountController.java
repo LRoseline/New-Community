@@ -17,8 +17,9 @@ public class AccountController {
 
     @PostMapping("/userlogin")
     public AccountDTO getLoginInfo(@RequestHeader("Account-id") String id) {
-        AccountDTO dto = service.logOn(id);
+        AccountDTO statue = service.logOn(id);
+        statue.setPw("Anoni");
 
-        return dto;
+        return statue;
     }
 }

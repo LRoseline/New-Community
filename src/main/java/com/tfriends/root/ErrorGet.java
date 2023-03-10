@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class ErrorGet implements ErrorController {
+
     @GetMapping("/error")
     public String ErrorPage(HttpServletRequest req, Model mdl) throws Exception {
         int status = Integer.valueOf(req.getAttribute(RequestDispatcher.ERROR_STATUS_CODE).toString());
